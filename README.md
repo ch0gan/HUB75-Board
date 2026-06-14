@@ -115,3 +115,11 @@ The animation changes palettes after every 1024 cycles.
 - If the display flickers or resets, use a stronger 5 V power supply and confirm the ESP32 and panel share ground.
 - If initialization fails with an I2S DMA memory error, reduce panel size, chain length, or brightness before adding more panels.
 - If serial output is unreadable, set the monitor baud rate to `115200`.
+
+# HARDWARE LINKS
+Waveshare P4 64x32 RGB LED Matrix - https://www.waveshare.com/rgb-matrix-p4-64x32.htm?srsltid=AfmBOorc7DjE0QZmudN0LzJZzf3w6uRR2I-Zb6qSzoCd6VZJYzBtV49H
+
+HUB75 Board from Amazon.com - "ESP32 LED Matrix Adapter Board with Dual Power Input & HUB75 Interface for RPi - Easy Connect Shield for LED Matrix Panel Projects" - https://www.amazon.com/dp/B0FVNMRRTB?ref=ppx_yo2ov_dt_b_fed_asin_title
+
+ESP32 w/ Breakout (breakout not needed) from Amazon.com "AITRIP 3 Sets ESP-WROOM-32 ESP32 ESP-32S 38Pin Development Board Type C Interface ESP-WROOM-32 with ESP32 Breakout Board Shield Terminal Adapter for ESP32 38 PIN Narrow" - https://www.amazon.com/dp/B0FQJG8ZBT?ref=ppx_yo2ov_dt_b_fed_asin_title&th=1
+
