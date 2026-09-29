@@ -1,13 +1,13 @@
 # ESP32 HUB75 LED Matrix
 
-PlatformIO project for driving a 64x32 HUB75 RGB LED matrix panel from an ESP32 using the Arduino framework and I2S DMA.
+PlatformIO project for driving a 128x64 HUB75 RGB LED matrix panel from an ESP32 using the Arduino framework and I2S DMA.
 
 The current firmware starts with a red, green, blue, white, and black display test, then runs a FastLED palette-based plasma animation.
 
 ## Hardware
 
 - ESP32 development board using the PlatformIO `esp32dev` board target
-- 64x32 HUB75 RGB LED matrix panel
+- 128x64 HUB75 RGB LED matrix panel
 - External 5 V power supply sized for the LED panel
 - HUB75 ribbon cable from the ESP32 GPIO pins to the panel input connector
 - Common ground between the ESP32 and the LED panel power supply
@@ -55,12 +55,14 @@ The sketch uses this custom GPIO mapping:
 | CLK          | 33         |
 | LAT/STB      | 2          |
 | OE           | 32         |
-| E            | Not used   |
+| E            | 22         |
+
+Connect the panel's E signal to ESP32 GPIO22. E is required for this 64-pixel-high panel.
 
 Panel configuration:
 
-- Width: 64 pixels
-- Height: 32 pixels
+- Width: 128 pixels
+- Height: 64 pixels
 - Chain length: 1 panel
 - Brightness in firmware: `128` out of `255`
 - Serial monitor speed: `115200`
@@ -117,7 +119,7 @@ The animation changes palettes after every 1024 cycles.
 - If serial output is unreadable, set the monitor baud rate to `115200`.
 
 # HARDWARE LINKS
-Waveshare P4 64x32 RGB LED Matrix - https://www.waveshare.com/rgb-matrix-p4-64x32.htm?srsltid=AfmBOorc7DjE0QZmudN0LzJZzf3w6uRR2I-Zb6qSzoCd6VZJYzBtV49H
+Original 64x32 panel reference (not the current panel configuration): Waveshare P4 64x32 RGB LED Matrix - https://www.waveshare.com/rgb-matrix-p4-64x32.htm?srsltid=AfmBOorc7DjE0QZmudN0LzJZzf3w6uRR2I-Zb6qSzoCd6VZJYzBtV49H
 
 HUB75 Board from Amazon.com - "ESP32 LED Matrix Adapter Board with Dual Power Input & HUB75 Interface for RPi - Easy Connect Shield for LED Matrix Panel Projects" - https://www.amazon.com/dp/B0FVNMRRTB?ref=ppx_yo2ov_dt_b_fed_asin_title
 

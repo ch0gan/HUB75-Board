@@ -12,12 +12,13 @@
 #define CH_B  16
 #define CH_C  25
 #define CH_D  4
+#define CH_E  22
 #define CLK  33
 #define LAT  2
 #define OE   32
 
-#define PANEL_WIDTH 64
-#define PANEL_HEIGHT 32
+#define PANEL_WIDTH 128//64
+#define PANEL_HEIGHT 64//32
 
 MatrixPanel_I2S_DMA *dma_display = nullptr;
 
@@ -37,7 +38,7 @@ void setup() {
   Serial.println("\n\nESP32 HUB75 LED Matrix - RGBW POC + Plasma Effect");
   Serial.println("Initializing DMA display...");
   
-  HUB75_I2S_CFG::i2s_pins _pins = {R1, G1, B1, R2, G2, B2, CH_A, CH_B, CH_C, CH_D, -1, LAT, OE, CLK};
+  HUB75_I2S_CFG::i2s_pins _pins = {R1, G1, B1, R2, G2, B2, CH_A, CH_B, CH_C, CH_D, CH_E, LAT, OE, CLK};
   
   HUB75_I2S_CFG mxconfig(
     PANEL_WIDTH,

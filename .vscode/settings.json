@@ -1,5 +1,6 @@
 {
     "chat.tools.terminal.autoApprove": {
         "pio": true
-    }
+    },
+    "cmake.sourceDirectory": "D:/Programming/ESP32_Projects/HUB75 Board/lib/ESP32-HUB75-MatrixPanel-DMA-master"
 }
